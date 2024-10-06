@@ -28,8 +28,9 @@ const TopNav = () => {
                 <div className="bg-[#b3b4bd] w-2/5 max-h-96 absolute top-[80%] overflow-auto">
                     {
                         searchList.map((s, index) => {
+                            console.log(s);
                             return <Link key={index} to="/" className="text-[#141619] flex gap-4 items-center hover:bg-[#525256] duration-200 p-4">
-                            <img className="w-16 h-16 object-cover" src={`https://image.tmdb.org/t/p/original/${s.backdrop_path}`} alt="" />
+                            <img className="w-16 h-16 object-cover" src={`https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}`} alt="" />
                             <h4 className="font-bold text-lg">{s.title || s.name}</h4>
                         </Link>
                         })
