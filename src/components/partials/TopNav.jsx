@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const TopNav = () => {
-    const [query, setQuery] = useState([]);
+    const [query, setQuery] = useState("");
     const [searchList, setSearchList] = useState([]);
 
     const getSearchList = async ()=>{
@@ -30,7 +30,7 @@ const TopNav = () => {
                         searchList.map((s, index) => {
                             console.log(s);
                             return <Link key={index} to="/" className="text-[#141619] flex gap-4 items-center hover:bg-[#525256] duration-200 p-4">
-                            <img className="w-16 h-16 object-cover" src={`https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}`} alt="" />
+                            <img className="w-16 h-16 object-cover" src={s.backdrop_path || s.profile_path ? `https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}` : `../../../public/noImage.jpg`} alt="" />
                             <h4 className="font-bold text-lg">{s.title || s.name}</h4>
                         </Link>
                         })
