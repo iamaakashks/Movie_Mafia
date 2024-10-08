@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function SideNav(){
+    const [close, setClose] = useState(false);
+    const [menu, setMenu] = useState(true);
+    const closeHandler = ()=>{
+        setClose(!close);
+        setMenu(!menu);
+    }
     return (
-        <div className='w-[20%] fixed h-[100%] px-6 py-8 border-r-[1px] border-[#2c2e3a] flex flex-col gap-6'>
+        <div className={`w-[20%] fixed h-[100%] px-6 py-8 border-r-[1px] border-[#2c2e3a] flex flex-col gap-6`}>
             <div className="title flex justify-between gap-[0.5vw] items-center">
                 <div className="flex gap-2 md:tracking-tight items-center">
                     <i className="ri-tv-fill text-[#0a21c0] text-2xl"></i>
                     <h1 className="font-bold text-2xl bg-gradient-to-r from-[#0a21c0] to-[#b3b4bd] text-transparent bg-clip-text">Movie Mafia</h1>
                 </div>
-                <i className="text-2xl cursor-pointer ri-menu-line hidden"></i>
-                <i className="text-2xl hover:bg-red-400 cursor-pointer ri-close-large-line"></i>
+                <i onClick={closeHandler} className={`text-2xl cursor-pointer ri-menu-line ${menu? "hidden": "block"}`}></i>
+                <i onClick={closeHandler} className={`text-2xl cursor-pointer ri-close-large-line ${close? "hidden" : "block"}`}></i>
             </div>
             <div className="feed border-b-[1px] border-[#2c2e3a]">
                 <h2 className="text-2xl font-medium tracking-tight">News Feed</h2>
