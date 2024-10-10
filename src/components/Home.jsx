@@ -8,29 +8,30 @@ import HorizaltalCards from "./partials/HorizaltalCards.jsx";
 export default function Home() {
   document.title = "Movie Mafia | Homepage";
   const [data, setData] = useState(null);
+  const [category, setCategory] = useState("all");
 
   const getData = async () => {
     try {
-      let { data } = await axios.get("/trending/all/day");
-      const randomData =
-        data.results[Math.floor(Math.random() * data.results.length)];
-      console.log(randomData);
+      let { data } = await axios.get("/trending/all/week");
+      const randomData = data.results[Math.floor(Math.random() * data.results.length)];
       setData(randomData);
     } catch (error) {
       console.log(error);
     }
   };
+
+  
   useEffect(() => {
     !data && getData();
-  }, []);
-  return (
+  }, [category]);
+  return data ? (
     <>
       <SideNav />
-      <div className="h-screen w-[80%] ml-[20%]">
+      <div className="min-h-screen w-[80%] ml-[20%] bg-[#141619]">
         <TopNav />
         <Header data={data} />
         <HorizaltalCards />
       </div>
     </>
-  );
+  ) : <div>Loading</div>
 }

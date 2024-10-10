@@ -9,7 +9,7 @@ export default function SideNav(){
         setMenu(!menu);
     }
     return (
-        <div className={`w-[20%] fixed h-[100%] px-6 py-8 border-r-[1px] border-[#2c2e3a] flex flex-col gap-6`}>
+        <div className={`w-[20%] fixed h-screen bg-[#141619] px-6 py-8 border-r-[1px] border-[#2c2e3a] flex flex-col gap-6`}>
             <div className="title flex justify-between gap-[0.5vw] items-center">
                 <div className="flex gap-2 md:tracking-tight items-center">
                     <i className="ri-tv-fill text-[#0a21c0] text-2xl"></i>

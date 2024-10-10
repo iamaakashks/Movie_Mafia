@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const Header = ({ data }) => {
-  return data ? (
+  return (
     <div className="w-full h-[45vh] relative">
       <img
         className="bg-gradient w-full h-full object-cover object-top"
@@ -25,15 +25,13 @@ const Header = ({ data }) => {
           </h4>
           <button
             type="button"
-            className="px-5 mt-4 text-xl font-medium py-2 bg-[#0a21c0] rounded-lg"
+            className="px-5 mt-4 text-xl font-medium py-2 bg-[#0a21c0] hover:bg-[#0a21e1] rounded-lg"
           >
             Trailer
           </button>
         </div>
       </div>
     </div>
-  ) : (
-    <div>Loading</div>
   );
 };
 

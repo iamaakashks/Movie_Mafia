@@ -19,7 +19,7 @@ const TopNav = () => {
   }, [query]);
 
   return (
-    <div className="w-full z-10 border-b-[1px] border-[#2c2e3a] h-[10vh] bg-transparent flex items-center justify-center relative">
+    <div className="z-10 border-b-[1px] border-[#2c2e3a] h-[10vh] bg-transparent flex items-center justify-center relative">
       <div className="w-2/5 flex items-center relative">
         <input
           onChange={(e) => setQuery(e.target.value)}

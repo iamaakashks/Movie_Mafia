@@ -1,30 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card.jsx";
+import axios from "../../utils/axios.jsx";
+
 const HorizaltalCards = () => {
+  const options = ["all", "movie", "tv"];
+  const [trendingData, setTrendingData] = useState([]);
+  const [category, setCategory] = useState("all");
+  const categoryFilter = (e) =>{
+    setCategory(e.target.value);
+  }
+
+  const getTrendingData = async () => {
+    try {
+      const { data } = await axios.get(`/trending/${category}/day`);
+      setTrendingData(data.results);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
+  useEffect(() => {
+    getTrendingData();
+  });
   return (
-    <div className="h-[45vh] w-full bg-zinc-800">
-        <div className="flex justify-between px-16 pt-4 h-[8vh]">
-            <h1 className="text-2xl">Trending</h1>
-            <select className="w-52 py-1.5 outline-none px-1 bg-[#141619]">
-                <option value="Filter">Filter</option>
-                <option value="All">All</option>
-                <option value="Movies">Movies</option>
-                <option value="TV Shows">TV Shows</option>
-            </select>
-        </div>
-        <div className="w-full overflow-x-auto h-[37vh] bg-black flex gap-8 items-center justify-start pl-8">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-        </div>
+    <div className="w-full">
+      <div className="flex justify-between items-center px-16 h-[8vh]">
+        <h1 className="text-2xl">Trending</h1>
+        <select
+          defaultValue="all"
+          className="w-60 py-1.5 outline-none px-1 bg-[#2c2e3a]"
+          onChange={categoryFilter}
+        >
+          <option value="0" disabled>
+            Filter
+          </option>
+          {options.map((opt, index) => {
+            return (
+              <option value={opt} key={index}>
+                {opt.toUpperCase()}
+              </option>
+            );
+          })}
+        </select>
+      </div>
+      <div className="my-4 flex gap-8 overflow-x-auto items-center justify-start px-8">
+        {trendingData.map((d, index) => {
+          return <Card key={index} data={d} />;
+        })}
+      </div>
     </div>
   );
 };
