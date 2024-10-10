@@ -4,6 +4,7 @@ import TopNav from "./partials/TopNav";
 import Header from "./partials/Header";
 import axios from "../utils/axios.jsx";
 import HorizaltalCards from "./partials/HorizaltalCards.jsx";
+import Loading from "./Loading.jsx";
 
 export default function Home() {
   document.title = "Movie Mafia | Homepage";
@@ -28,10 +29,12 @@ export default function Home() {
     <>
       <SideNav />
       <div className="min-h-screen w-[80%] ml-[20%] bg-[#141619]">
-        <TopNav />
+        <div className="z-10 border-b-[1px] border-[#2c2e3a] bg-transparent ">
+          <TopNav />
+        </div>
         <Header data={data} />
         <HorizaltalCards />
       </div>
     </>
-  ) : <div>Loading</div>
+  ) : <Loading />
 }

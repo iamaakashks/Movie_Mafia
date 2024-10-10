@@ -21,11 +21,11 @@ export default function SideNav(){
             <div className="feed border-b-[1px] border-[#2c2e3a]">
                 <h2 className="text-2xl font-medium tracking-tight">News Feed</h2>
                 <nav className="text-lg ml-4">
-                    <Link className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-fire-fill"></i>Trending</Link>
-                    <Link className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-bard-fill"></i>Popular</Link>
-                    <Link className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-movie-2-fill"></i>Movies</Link>
-                    <Link className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-tv-2-fill"></i>TV Shows</Link>
-                    <Link className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-user-search-fill"></i>People</Link>
+                    <Link to="/trending/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-fire-fill"></i>Trending</Link>
+                    <Link to="/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-bard-fill"></i>Popular</Link>
+                    <Link to="/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-movie-2-fill"></i>Movies</Link>
+                    <Link to="/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-tv-2-fill"></i>TV Shows</Link>
+                    <Link to="/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-user-search-fill"></i>People</Link>
                 </nav>
             </div>
             <div className="flex flex-col gap-4">

@@ -6,9 +6,9 @@ const HorizaltalCards = () => {
   const options = ["all", "movie", "tv"];
   const [trendingData, setTrendingData] = useState([]);
   const [category, setCategory] = useState("all");
-  const categoryFilter = (e) =>{
+  const categoryFilter = (e) => {
     setCategory(e.target.value);
-  }
+  };
 
   const getTrendingData = async () => {
     try {
@@ -18,7 +18,7 @@ const HorizaltalCards = () => {
       console.log(error);
     }
   };
-  
+
   useEffect(() => {
     getTrendingData();
   });
@@ -28,7 +28,7 @@ const HorizaltalCards = () => {
         <h1 className="text-2xl">Trending</h1>
         <select
           defaultValue="all"
-          className="w-60 py-1.5 outline-none px-1 bg-[#2c2e3a]"
+          className="w-60 py-1.5 rounded-sm outline-none px-1 bg-[#2c2e3a]"
           onChange={categoryFilter}
         >
           <option value="0" disabled>
