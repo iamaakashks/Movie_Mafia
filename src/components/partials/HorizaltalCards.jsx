@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card.jsx";
 import axios from "../../utils/axios.jsx";
+import { Link } from "react-router-dom";
 
 const HorizaltalCards = () => {
   const options = ["all", "movie", "tv"];
@@ -25,7 +26,7 @@ const HorizaltalCards = () => {
   return (
     <div className="w-full">
       <div className="flex justify-between items-center px-16 h-[8vh]">
-        <h1 className="text-2xl">Trending</h1>
+        <Link to="/trending/" className="text-2xl" >Trending</Link>
         <select
           defaultValue="all"
           className="w-60 py-1.5 rounded-sm outline-none px-1 bg-[#2c2e3a]"

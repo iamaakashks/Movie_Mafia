@@ -22,8 +22,8 @@ export default function SideNav(){
                 <h2 className="text-2xl font-medium tracking-tight">News Feed</h2>
                 <nav className="text-lg ml-4">
                     <Link to="/trending/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-fire-fill"></i>Trending</Link>
-                    <Link to="/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-bard-fill"></i>Popular</Link>
-                    <Link to="/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-movie-2-fill"></i>Movies</Link>
+                    <Link to="/popular/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-bard-fill"></i>Popular</Link>
+                    <Link to="/movies" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-movie-2-fill"></i>Movies</Link>
                     <Link to="/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-tv-2-fill"></i>TV Shows</Link>
                     <Link to="/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-user-search-fill"></i>People</Link>
                 </nav>
