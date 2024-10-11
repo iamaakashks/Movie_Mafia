@@ -24,8 +24,8 @@ export default function SideNav(){
                     <Link to="/trending/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-fire-fill"></i>Trending</Link>
                     <Link to="/popular/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-bard-fill"></i>Popular</Link>
                     <Link to="/movies" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-movie-2-fill"></i>Movies</Link>
-                    <Link to="/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-tv-2-fill"></i>TV Shows</Link>
-                    <Link to="/" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-user-search-fill"></i>People</Link>
+                    <Link to="/tv" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-tv-2-fill"></i>TV Shows</Link>
+                    <Link to="/people" className="p-4 my-4 hover:bg-gradient-to-r from-[#0a21c0] via-[#050a44] rounded-md flex gap-4"><i className="ri-user-search-fill"></i>People</Link>
                 </nav>
             </div>
             <div className="flex flex-col gap-4">
