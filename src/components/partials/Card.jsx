@@ -15,7 +15,7 @@ const Card = ({data, rating}) => {
         alt=""
       />
       <h4 className={`absolute bottom-12 px-2 leading-none text-center w-full font-black text-2xl ${isHovered ? "block" : "hidden"}`}>{data.title || data.original_title || data.name || data.original_name}</h4>
-      {rating && <div className="absolute top-0 right-0 w-12 h-12 bg-[#0a21c0] rounded-full flex justify-center items-center">{Math.floor(data.vote_average*10)}%</div>}
+      {rating && <div className="absolute bottom-[8%] right-0 w-12 h-12 bg-[#0a21c0] rounded-full flex justify-center items-center">{Math.floor(data.vote_average*10)}%</div>}
     </div>
   );
 };
