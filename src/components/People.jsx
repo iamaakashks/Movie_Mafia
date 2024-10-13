@@ -7,7 +7,6 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 export default function Trending() {
   const navigateBack = useNavigate();
-  const options = ["tv", "movie"];
   const [people, setPeople] = useState([]);
   const [category, setCategory] = useState("popular");
   const [page, setPage] = useState(1);
@@ -71,7 +70,7 @@ export default function Trending() {
         next={getPeople}
       >
         {filteredData.map((d, i) => {
-          return <Card data={d} key={i} />;
+          return <Card data={d} key={i} rating={false}/>;
         })}
       </InfiniteScroll>
     </div>

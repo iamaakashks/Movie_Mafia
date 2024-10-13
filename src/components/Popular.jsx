@@ -80,7 +80,7 @@ export default function Trending() {
       </div>
       <InfiniteScroll className="flex flex-wrap gap-6 py-4 px-20" dataLength={popularData.length} hasMore={hasMore} next={getPopularData}>
           {filteredData.map((d, i) => {
-                return <Card data={d} key={i} />
+                return <Card data={d} key={i} rating={true}/>
           })}
       </InfiniteScroll>
     </div>
