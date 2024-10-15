@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const Card = ({data, rating}) => {
   const [isHovered, setIsHovered] = useState(false);
-  console.log(data);
   return (
     <div
       className="relative w-52 flex-shrink-0 rounded-lg"
